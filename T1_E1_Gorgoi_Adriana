@@ -1,0 +1,8 @@
+a=0:0.1:2
+length(a) %aflam lungimea vectorului a, care va fi egala cu cea a lui b pentru ca inmultirea sa aiba sens
+b=ones(21,1)
+c=a*b
+d=b*a
+e=a.*b
+f=b.*a
+%Se observa ca se obtin aceleasi rezultate ca la inmultirea b*a (la a*b vom avea un singur rand, elementele inmultite adunandu-se)

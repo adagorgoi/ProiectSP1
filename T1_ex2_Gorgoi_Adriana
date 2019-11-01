@@ -1,0 +1,61 @@
+%Problema 2 (semnal triunghiular periodic)
+
+%a)Pentru 2ms:
+
+T=5; %perioada semnalului
+Uv1=1; %nivelul maxim al amplitudinii
+Uv2=-2; %nivelul minim al amplitudinii
+slope=1; %panta
+F=0.2; %frecventa semnalului
+w=2*pi*F; %pulsatia semnalului
+t=0:0.002:20; %rezolutia temporala este de 2ms, iar pe ecran vor aparea 4 perioade (5*4=20)
+A=(Uv1+abs(Uv2))/2; %amplitudinea semnalului este egala cu 1.5V, deci Ucc=-0.5V
+Ucc=-0.5; %componenta continua este negativa, semnalul fiind deplasat in jos
+st=(A*sawtooth((w*t),slope))+Ucc; %st=semnal triunghiular
+%functia sawtooth genereaza un semnal triunghiular de faza w*t si panta
+%slope
+subplot(3,1,1); %primul grafic 
+plot(t,st),xlabel('t[s]'),ylabel('A[V]'),grid,title('Semnal triunghiular - rezolutie de 2ms')
+%grid traseaza pe ecran o retea de linii, facilitand citirea graficului
+%Ox -> timpul, Oy -> amplitudinea semnalului
+axis([0 22 -2.5 1.5]);
+%schimbam limitele axelor pentru a putea vizualiza tot semnalul
+
+%b) Pentru 20ms:
+
+T=5; %perioada semnalului
+Uv1=1; %nivelul maxim al amplitudinii
+Uv2=-2; %nivelul minim al amplitudinii
+slope=1; %panta
+F=0.2; %frecventa semnalului
+w=2*pi*F; %pulsatia semnalului
+t=0:0.02:20; %rezolutia temporala este de 20ms, iar pe ecran vor aparea 4 perioade (5*4=20)
+A=(Uv1+abs(Uv2))/2; %amplitudinea semnalului este egala cu 1.5V, deci Ucc=-0.5V
+Ucc=-0.5; %componenta continua este negativa, semnalul fiind deplasat in jos
+st=(A*sawtooth((w*t),slope))+Ucc; %st=semnal triunghiular
+%functia sawtooth genereaza un semnal triunghiular 
+subplot(3,1,2); %al doilea grafic 
+plot(t,st),xlabel('t[s]'),ylabel('A[V]'),grid,title('Semnal triunghiular - rezolutie de 20ms')
+%grid traseaza pe ecran o retea de linii, facilitand citirea graficului
+%Ox -> timpul, Oy -> amplitudinea semnalului
+axis([0 22 -2.5 1.5]);
+
+%c) Pentru 200ms:
+
+T=5; %perioada semnalului
+Uv1=1; %nivelul maxim al amplitudinii
+Uv2=-2; %nivelul minim al amplitudinii
+slope=1; %panta
+F=0.2; %frecventa semnalului
+w=2*pi*F; %pulsatia semnalului
+t=0:0.2:20; %rezolutia temporala este de 200ms, iar pe ecran vor aparea 4 perioade (5*4=20)
+A=(Uv1+abs(Uv2))/2; %amplitudinea semnalului este egala cu 1.5V, deci Ucc=-0.5V
+Ucc=-0.5; %componenta continua este negativa, semnalul fiind deplasat in jos
+st=(A*sawtooth((w*t),slope))+Ucc; %st=semnal triunghiular
+%functia sawtooth genereaza un semnal triunghiular de faza w*t si panta
+%slope
+subplot(3,1,3); %al doilea grafic 
+plot(t,st),xlabel('t[s]'),ylabel('A[V]'),grid,title('Semnal triunghiular - rezolutie de 200ms')
+%grid traseaza pe ecran o retea de linii, facilitand citirea graficului
+%Ox -> timpul, Oy -> amplitudinea semnalului
+axis([0 22 -2.5 1.5]);

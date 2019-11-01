@@ -1,11 +1,11 @@
+%Problema3 (semnal dreptunghiular multinivel)
+
 nivel1=[-1 1]
 t1=0:0.002:5; %pasul de 2ms
 t2=0:0.02:5; %pasul de 20ms
 t3=0:0.2:5; %pasul de 200ms
-%- functia datasample(nivel,1) returneaza o valoare aleatoare din vectorul
+%functia datasample(nivel,1) returneaza o valoare aleatoare din vectorul
 %nivel respectiv
-% - hold on este folosit pentru a stoca pe grafic toate semnalele
-% din bucla repetitiva, rezultand astfel imaginea finala
 %functia rectpuls(t-i,0.25) returneaza un puls de latime 0.25(durata unui
 %semnal), centrat in punctul t-i
 figure (1)
